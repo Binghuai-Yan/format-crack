@@ -1,0 +1,8 @@
+services:
+  format-crack:
+    build: .
+    image: format-crack:latest
+    container_name: format-crack
+    ports:
+      - "8080:80"
+    restart: unless-stopped
