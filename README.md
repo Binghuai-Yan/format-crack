@@ -42,6 +42,13 @@ docker run -d --name format-crack --restart unless-stopped -p 8080:80 format-cra
 docker compose up -d --build
 ```
 
+GitHub Container Registry 已发布 `v0.1.0` 镜像，也可以直接运行：
+
+```bash
+docker pull ghcr.io/binghuai-yan/format-crack:v0.1.0
+docker run -d --name format-crack --restart unless-stopped -p 8080:80 ghcr.io/binghuai-yan/format-crack:v0.1.0
+```
+
 ## Windows 部署
 
 ### 方式一：Docker Desktop（推荐）
@@ -113,7 +120,7 @@ npx serve -s dist -l 8080
 
 ## 发布
 
-项目使用 MIT License，详见 [LICENSE](LICENSE)。版本变化记录在 [CHANGELOG.md](CHANGELOG.md)。
+项目使用 MIT License，详见 [LICENSE](LICENSE)。版本变化记录在 [CHANGELOG.md](CHANGELOG.md)。GitHub Actions 会在 `main` 分支构建静态产物，并在推送 `v*` 标签时发布 GHCR 镜像。
 
 ## 目录结构
 
